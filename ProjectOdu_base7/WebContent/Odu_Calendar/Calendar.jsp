@@ -73,7 +73,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
   <!-- The Grid -->
   <div class="w3-row">
     <!-- 왼쪽 시작 -->
-    <div class="w3-col m3" >
+    <div class="w3-col m14" >
       <!-- 프로필 부분 -->
       <div class="w3-card-2 w3-round w3-white">
         <div class="w3-container">
@@ -259,7 +259,7 @@ String sright = String.format("calendar.jsp?year=%d&month=%d", year, month+1);
 <tr height="80">
 	<td colspan="7" align="center">
 		<%=pp %><%=p %>	
-		<font color="red" size="10">
+		<font color="red" size="6">
 			<%=String.format("%d년&nbsp;&nbsp;%d월", year, month) %>
 		</font>
 		<%=n %><%=nn %>
@@ -313,9 +313,8 @@ for(int i = 0;i < (7-(dayOfWeek+lastDay-1)%7)%7; i++){
 }
 %>
 </tr>
+       
 
-
-</table>
 
   <!--   중간 끝 -->
 
@@ -325,9 +324,9 @@ for(int i = 0;i < (7-(dayOfWeek+lastDay-1)%7)%7; i++){
 		<iframe src = "Odu_timeline/timeline.jsp" width="100%" height="100%" frameborder="0" border="0" scrolling="yes" bgcolor=#EEEEEE bordercolor="#FF000000" marginwidth="0" marginheight="0" name="main_frame" id="main_frame"></iframe> 
 
 	</div> -->
-    
+
     <!-- 오른쪽 시작 -->
-    <div class="w3-col m2" >
+    <div class="w3-col m13" >
       <div class="w3-card-2 w3-round w3-white w3-center">
         <div class="w3-container">
           <p>오늘의 일정</p>
@@ -340,16 +339,18 @@ for(int i = 0;i < (7-(dayOfWeek+lastDay-1)%7)%7; i++){
       <br>
       
     
-      
+ 
     <!-- 오른 쪽끝  -->
     </div>
     
   <!-- End Grid -->
-  </div>
+  </div>  
+  </table>
   
 <!-- End Page Container -->
 </div>
 <br>
+
 
 
  
