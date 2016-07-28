@@ -8,9 +8,33 @@
  <link rel="stylesheet" href="css/w3.css">
  <link rel="stylesheet" href="css/w3-theme-blue-grey.css">
 <title>오늘부터 듀오</title>
+
+<script type="text/javascript">
+function mysubmit(num){
+	var f = document.fm;
+	if(num == 1){
+		f.action="Odu_timeline/timeline.jsp";
+	}
+	if(num == 2){
+		f.action="Odu_Calendar/Calendar.jsp";
+	}
+	if(num == 3){
+		f.action="Odu_together/together.jsp";
+	}
+	if(num == 4){
+		f.action="Odu_bbs/bbslist.jsp";
+	}
+	if(num == 5){
+		f.action="Odu_judgepoll/judgepoll.jsp";
+	}
+	f.submit();
+}
+</script>
+
 <style>
 html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
 </style>
+
 <body class="w3-theme-l5">
 
 <!-- Navbar -->
@@ -58,13 +82,14 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
       <br>
       
       <!--왼쪽 메뉴 바 -->
+      <form name="fm" method="post">
       <div class="w3-card-2 w3-round">
         <div class="w3-accordion w3-white" >
-          <button onclick="" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> 타임라인</button>
-          <button onclick="" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i>일정관리 </button>
-           <button onclick="" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> 같이해요</button>
-          <button onclick="" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> 자유게시판</button>
-          <button onclick="" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> 재판게시판</button>
+          <button onclick="mysubmit(1)" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> 타임라인</button>
+          <button onclick="mysubmit(2)" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i>일정관리 </button>
+           <button onclick="mysubmit(3)" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> 같이해요</button>
+          <button onclick="mysubmit(4)" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> 자유게시판</button>
+          <button onclick="mysubmit(5)" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> 재판게시판</button>
       
           
           <button onclick="myFunction('Demo3')" class="w3-btn-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i> 피플</button>
@@ -85,6 +110,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Open Sans", sans-serif}
           </div>
         </div>
       </div>
+      </form>
       <br>
       
     
