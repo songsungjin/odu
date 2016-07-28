@@ -241,9 +241,9 @@ String sright = String.format("calendar.jsp?year=%d&month=%d", year, month+1);
 %>
 
 <table class="w3-table-all">
-<col width="80"/><col width="80"/><col width="80"/>
-<col width="80"/><col width="80"/><col width="80"/>
-<col width="80"/>
+<col width="85"/><col width="85"/><col width="85"/>
+<col width="85"/><col width="85"/><col width="85"/>
+<col width="85"/>
 <%-- <tr class='date'>
 	<td colspan="7">
 		<a href='<%=sleft %>'>
@@ -256,10 +256,10 @@ String sright = String.format("calendar.jsp?year=%d&month=%d", year, month+1);
 	</td>
 </tr> --%>
 
-<tr height="80">
+<tr height="30">
 	<td colspan="7" align="center">
 		<%=pp %><%=p %>	
-		<font color="red" size="6">
+		<font color="red" size="5">
 			<%=String.format("%d년&nbsp;&nbsp;%d월", year, month) %>
 		</font>
 		<%=n %><%=nn %>
@@ -267,17 +267,19 @@ String sright = String.format("calendar.jsp?year=%d&month=%d", year, month+1);
 </tr>
 
 
-<tr height="80" align="center">
-	<td valign="middle">일</td>
-	<td>월</td>
-	<td>화</td>
-	<td>수</td>
-	<td>목</td>
-	<td>금</td>
-	<td>토</td>
+<tr height="85" align="center">
+
+	<td valign="middle"><font color="red" size="1">일</font></td>
+	<td><font color="RGB(90,90,90)" size="1">월</font></td>
+	<td><font color="RGB(90,90,90)" size="1">화</font></td>
+	<td><font color="RGB(90,90,90)" size="1">수</font></td>
+	<td><font color="RGB(90,90,90)" size="1">목</font></td>
+	<td><font color="RGB(90,90,90)" size="1">금</font></td>
+	<td><font color="blue" size="1">토</font></td>
+
 </tr>
 
-<tr height="80" align="left" valign="top">
+<tr height="85" align="left" valign="top">
 <%
 for(int i = 1;i < dayOfWeek; i++){
 	%>
@@ -288,9 +290,9 @@ int lastDay = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
 for(int i = 1;i <= lastDay; i++){
 	%>	
 	
-	<td><%=callist(year, month, i)%>&nbsp;<%=showpen(year, month, i)%>
-	<%=makeTable(year, month, i, cdtos) %>	
-	</td>
+	<td><font size="1" color="RGB(90,90,90)"><%=callist(year, month, i)%>&nbsp;<%=showpen(year, month, i)%>
+	<%=makeTable(year, month, i, cdtos) %><img src="../image/cake.png" onmouseover="alert('생일입니다.')">
+	</font></td>
 	<%-- <td height="100" align="left" valign="top">
 		<%=i %>
 		<a href='calwrite.jsp?year=<%=year %>&month=<%=month %>&day=<%=i %>'>
@@ -301,7 +303,7 @@ for(int i = 1;i <= lastDay; i++){
 	<%
 	if((i+dayOfWeek-1)%7==0){	// 개행
 	%>
-		</tr><tr height="80" align="left" valign="top">
+		</tr><tr height="85" align="left" valign="top">
 	<%
 	}
 }
