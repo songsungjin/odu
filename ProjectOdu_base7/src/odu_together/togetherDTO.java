@@ -32,160 +32,178 @@ REFERENCES MEMBER(ID);
 */
 
 public class togetherDTO implements Serializable {
-	
-	private int seq;
-	private int bbs_num;
-	private String id;
-	private String cate;
-	private String title;
-	private String content;
-	private String f_name;
-	private String M_date;
-	private int dead;
-	private int t_num;
-	private int parent;
-	private int readcount;
-	private int del;
-	
-	public togetherDTO() {}
+   
+   private int seq;
+   private int bbs_num;
+   private String id;
+   private String cate;
+   private String title;
+   private String content;
+   private String f_name;
+   private String wdate;
+   private String M_date;
+   private int dead;
+   private int t_num;
+   private int parent;
+   private int readcount;
+   private int del;
+   
+   public togetherDTO() {}
 
-	public togetherDTO(int seq, int bbs_num, String id, String cate, String title, String content, String f_name,
-			String M_date, int dead, int t_num, int parent, int readcount, int del) {
-		this.seq = seq;
-		this.bbs_num = bbs_num;
-		this.id = id;
-		this.cate = cate;
-		this.title = title;
-		this.content = content;
-		this.f_name = f_name;
-		
-		this.M_date = M_date;
-		this.dead = dead;
-		this.t_num = t_num;
-		this.parent = parent;
-		this.readcount = readcount;
-		this.del = del;
-	}
+   public togetherDTO(int seq, int bbs_num, String id, String cate, String title, String content, String f_name,
+         String wdate, String M_date, int dead, int t_num, int parent, int readcount, int del) {
+      this.seq = seq;
+      this.bbs_num = bbs_num;
+      this.id = id;
+      this.cate = cate;
+      this.title = title;
+      this.content = content;
+      this.f_name = f_name;
+      this.wdate = wdate;
+      this.M_date = M_date;
+      this.dead = dead;
+      this.t_num = t_num;
+      this.parent = parent;
+      this.readcount = readcount;
+      this.del = del;
+   }
 
-	@Override
-	public String toString() {
-		return "togetherDTO [seq=" + seq + ", bbs_num=" + bbs_num + ", id=" + id + ", cate=" + cate + ", title=" + title
-				+ ", content=" + content + ", f_name=" + f_name + ", M_date=" + M_date + ", dead=" + dead + ", t_num="
-				+ t_num + ", parent=" + parent + ", readcount=" + readcount + ", del=" + del + "]";
-	}
-	
-	public togetherDTO(String id, String cate, String title, String content, String f_name, String M_date, int t_num) {
-		this.id = id;
-		this.cate = cate;
-		this.title = title;
-		this.content = content;
-		this.f_name = f_name;
-		this.M_date = M_date;
-		this.t_num = t_num;
-	}
+   @Override
+   public String toString() {
+      return "togetherDTO [seq=" + seq + ", bbs_num=" + bbs_num + ", id=" + id + ", cate=" + cate + ", title=" + title
+            + ", content=" + content + ", f_name=" + f_name + ", M_date=" + M_date + ", dead=" + dead + ", t_num="
+            + t_num + ", parent=" + parent + ", readcount=" + readcount + ", del=" + del + "]";
+   }
+   
+   public togetherDTO(String id, String cate, String title, String content, String f_name, String wdate, String M_date, int t_num) {
+      this.id = id;
+      this.cate = cate;
+      this.title = title;
+      this.content = content;
+      this.f_name = f_name;
+      this.wdate = wdate;
+      this.M_date = M_date;
+      this.t_num = t_num;
+   }
+   public togetherDTO(String id, String cate, String title, String content, String f_name, String M_date, int t_num) {
+      this.id = id;
+      this.cate = cate;
+      this.title = title;
+      this.content = content;
+      this.f_name = f_name;
+      this.M_date = M_date;
+      this.t_num = t_num;
+   }
+   public int getSeq() {
+      return seq;
+   }
 
-	public int getSeq() {
-		return seq;
-	}
+   public void setSeq(int seq) {
+      this.seq = seq;
+   }
 
-	public void setSeq(int seq) {
-		this.seq = seq;
-	}
+   public int getBbs_num() {
+      return bbs_num;
+   }
 
-	public int getBbs_num() {
-		return bbs_num;
-	}
+   public void setBbs_num(int bbs_num) {
+      this.bbs_num = bbs_num;
+   }
 
-	public void setBbs_num(int bbs_num) {
-		this.bbs_num = bbs_num;
-	}
+   public String getId() {
+      return id;
+   }
 
-	public String getId() {
-		return id;
-	}
+   public void setId(String id) {
+      this.id = id;
+   }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+   public String getCate() {
+      return cate;
+   }
 
-	public String getCate() {
-		return cate;
-	}
+   public void setCate(String cate) {
+      this.cate = cate;
+   }
 
-	public void setCate(String cate) {
-		this.cate = cate;
-	}
+   public String getTitle() {
+      return title;
+   }
 
-	public String getTitle() {
-		return title;
-	}
+   public void setTitle(String title) {
+      this.title = title;
+   }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+   public String getContent() {
+      return content;
+   }
 
-	public String getContent() {
-		return content;
-	}
+   public void setContent(String content) {
+      this.content = content;
+   }
 
-	public void setContent(String content) {
-		this.content = content;
-	}
+   public String getF_name() {
+      return f_name;
+   }
 
-	public String getF_name() {
-		return f_name;
-	}
+   public void setF_name(String f_name) {
+      this.f_name = f_name;
+   }
+   
+   public String getWdate() {
+      return wdate;
+   }
 
-	public void setF_name(String f_name) {
-		this.f_name = f_name;
-	}
+   public void setWdate(String wdate) {
+      this.wdate = wdate;
+   }
 
-	public String getWdate() {
-		return M_date;
-	}
+   public String getM_date() {
+      return M_date;
+   }
 
-	public void setWdate(String M_date) {
-		this.M_date = M_date;
-	}
+   public void setM_date(String M_date) {
+      this.M_date = M_date;
+   }
 
-	public int getDead() {
-		return dead;
-	}
+   public int getDead() {
+      return dead;
+   }
 
-	public void setDead(int dead) {
-		this.dead = dead;
-	}
+   public void setDead(int dead) {
+      this.dead = dead;
+   }
 
-	public int getT_num() {
-		return t_num;
-	}
+   public int getT_num() {
+      return t_num;
+   }
 
-	public void setT_num(int t_num) {
-		this.t_num = t_num;
-	}
+   public void setT_num(int t_num) {
+      this.t_num = t_num;
+   }
 
-	public int getParent() {
-		return parent;
-	}
+   public int getParent() {
+      return parent;
+   }
 
-	public void setParent(int parent) {
-		this.parent = parent;
-	}
+   public void setParent(int parent) {
+      this.parent = parent;
+   }
 
-	public int getReadcount() {
-		return readcount;
-	}
+   public int getReadcount() {
+      return readcount;
+   }
 
-	public void setReadcount(int readcount) {
-		this.readcount = readcount;
-	}
+   public void setReadcount(int readcount) {
+      this.readcount = readcount;
+   }
 
-	public int getDel() {
-		return del;
-	}
+   public int getDel() {
+      return del;
+   }
 
-	public void setDel(int del) {
-		this.del = del;
-	}
-	
+   public void setDel(int del) {
+      this.del = del;
+   }
+   
 }
